@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Bootstrap (latest) Grid Styles Only -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	
+	
+	<!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+	<style>.mnu-span,.toggle-mnu{cursor:pointer;vertical-align:middle}::-webkit-input-placeholder{color:#fff;opacity:1}:-moz-placeholder{color:#fff;opacity:1}::-moz-placeholder{color:#fff;opacity:1}:-ms-input-placeholder{color:#fff;opacity:1}body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}body{font-size:16px;min-width:320px;position:relative;line-height:1.6;overflow-x:hidden}.preloader{position:fixed;top:0;left:0;width:100%;height:100vh;background-color:#fff;z-index:999;background-image:url(img/preloader.svg);background-repeat:no-repeat;background-position:center}.toggle-mnu{padding-bottom:4px;display:inline-block}.toggle-mnu span{background:#fff;display:block;height:2px;margin-top:5px;width:22px}.mnu-span{font-size:11px;font-family:OpenSansBold;display:inline-block;text-transform:uppercase;padding-left:5px;color:#fff}.hidden{display:none}.main-head{position:relative;z-index:4}.main-head .owl-carousel .slider-inner .col-md-6{padding:0}.main-head .owl-carousel .slider-inner .col-md-6 .part-left{background-color:#5e6e66;height:100vh;position:relative}.main-head .owl-carousel .slider-inner .col-md-6 .part-left h1{position:relative;z-index:3;color:#fff;font-size:33px;font-family:OpenSansBold;margin:0;left:62%;width:90%;top:38%}.main-head .owl-carousel .slider-inner .col-md-6 .part-left h1::before{content:'';position:absolute;height:2px;width:55px;bottom:-54px;left:0;background-color:#fff}.main-head .owl-carousel .slider-inner .col-md-6 .part-left a{display:inline-block;position:absolute;z-index:3;font-size:18px;font-family:OpenSansBold;margin:0;left:62%;top:64%;text-decoration:underline;color:#7ac143}.main-head .owl-carousel .slider-inner .col-md-6 .part-right{background-repeat:no-repeat;background-size:cover;height:100vh;background-position:center}.wrap-arr{position:relative}.slider .owl-controls .owl-nav .owl-prev{background-image:url(img/arrowright-copy.png);background-repeat:no-repeat;width:24px;height:15px;position:absolute;top:50%;left:30px}.slider .owl-controls .owl-nav .owl-next{position:absolute;top:50%;right:30px;background-image:url(img/arrowright.png);background-repeat:no-repeat;width:24px;height:15px}.owl-dots{position:absolute;display:inline-block;bottom:20px;right:60%}.owl-dots .owl-dot{margin:20px 15px 25px;height:8px;width:8px;background-color:#7ac143;display:inline-block;-webkit-border-radius:10em;border-radius:10em}.owl-dots .active{background:#fff}.top-pannel-head{position:absolute;z-index:4;padding-left:45px;padding-top:30px;width:100%}.top-pannel-head .toggle-mnu{margin-bottom:36px}.top-pannel-head a{display:inline-block;vertical-align:middle}.top-pannel-head a #logo{height:70px;width:290px}.top-pannel-head .mnu-span{margin-bottom:36px;display:inline-block;vertical-align:middle;margin-right:30px}.top-pannel-head .lang-link{display:inline-block;vertical-align:middle;position:relative;left:14%;margin-bottom:36px;font-size:11px;font-family:OpenSansBold}.top-pannel-head .lang-link a{text-decoration:none;color:#fff;float:right}</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load Fonts CSS Start -->
+	<script>
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+	</script>
+	<!-- Load Fonts CSS End -->
+
+	<!-- Load Custom CSS Start -->
+	
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load Custom CSS End -->
+
+	<!-- Load Custom CSS Compiled without JS Start -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+	<!-- Load Custom CSS Compiled without JS End -->
+
+	<!-- Custom Browsers Color Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<!-- Hidden mnu -->
+	<section class="hidden-menu">
+		<div  class="head-h-pannel ">
+			<div class="close-mnu">&#x2715</div>
+			<ul>
+				<li class="active"><a href="#">en</a></li>
+				<li><a href="#">fr</a></li>
+				<li><a href="#">nl</a></li>
+			</ul>
+		</div>
+
+		<div class="main_menu">
+			<div class="body-h-nav">
+				<h3>
+					<a  href="#home">Home</a>
+				</h3>
+				<h3>
+					<a  href="#project">Projects</a>
+				</h3>
+
+				<div class="tags-wrap">
+					<ul class="f-tags">
+						<li class="main_menu_content_item"><a	class="page-popup" href="#test-modal" >Clélidée</a></li>
+						<li class="main_menu_content_item"><a class="page-popup" href="#test-modal">Emaillerie</a></li>
+						<li class="main_menu_content_item"><a class="page-popup" href="#test-modal">Clélidée</a></li>
+						<li class="main_menu_content_item"><a class="page-popup" href="#test-modal">Emaillerie</a></li>
+					</ul>
+					<ul class="s-tags hidden-xs">
+						<li class="main_menu_content_item"><a class="page-popup" href="#test-modal">Clélidée</a></li>
+						<li class="main_menu_content_item"><a class="page-popup" href="#test-modal">Emaillerie</a></li>
+					</ul>
+				</div>
+
+				<h3>
+					<a  href="#team">Team</a>
+				</h3>
+				<h3>
+					<a  href="#aboutUs">About Us</a>
+				</h3>
+				<h3>
+					<a  href="#news">News &amp; Press</a>
+				</h3>
+				<h3>
+					<a href="#footer">Contact</a>
+				</h3>
+			</div>
+
+			<div class="footer-h-nav">
+				<a href="#" class="btn">Login</a>
+			</div>
+
+		</section>
+
+		<!-- Main Header -->
+		<header class="main-head" id="home">
+
+
+			<div id="top-pannel-head" class="top-pannel-head top-nav">
+				
+
+				<div class="toggle-mnu ">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<span class="mnu-span">Menu</span>
+
+				<a href="index.html">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" id="logo" version="1.1" width="225" height="48" viewBox="0 0 225 48">
+						<defs id="SvgjsDefs1001"/>
+						<path id="SvgjsPath1007" d="M215.3 56.1L214.66000000000003 57.7C215.97000000000003 58.63 218.15000000000003 59.11 220.10000000000002 59.11 222.06000000000003 59.11 224.36 58.57 225.93000000000004 57.06 227.37000000000003 55.68 228.24000000000004 53.510000000000005 228.24000000000004 49.09L228.24000000000004 38.84C228.24000000000004 36.86000000000001 228.30000000000004 35.510000000000005 228.40000000000003 34.260000000000005L226.57000000000002 34.260000000000005 226.48000000000002 37.050000000000004 226.41000000000003 37.050000000000004C225.71000000000004 35.64000000000001 224.07000000000002 33.85 220.84000000000003 33.85 217.06000000000003 33.85 213.19000000000003 37.02 213.19000000000003 43.07 213.19000000000003 47.87 216.23000000000002 51.59 220.46000000000004 51.59 223.37000000000003 51.59 225.32000000000005 50.11000000000001 226.22000000000003 48.38L226.28000000000003 48.38 226.28000000000003 50.72C226.28000000000003 55.68 223.79000000000002 57.48 220.33000000000004 57.48 218.15000000000003 57.48 216.45000000000005 56.839999999999996 215.30000000000004 56.099999999999994ZM180.3 38.49C182.77 37.660000000000004 184.53 35.54 184.53 33.11 184.53 29.84 182.48 27.09 176.58 27.09 174.73000000000002 27.09 172.97 27.31 171.65 27.63L171.65 51.55C172.58 51.62 174.02 51.779999999999994 175.91 51.779999999999994 179.4 51.779999999999994 182 51.10999999999999 183.6 49.44 185.17 47.87 185.42 45.949999999999996 185.42 44.769999999999996 185.42 40.88999999999999 182.45 39.06999999999999 180.29999999999998 38.589999999999996ZM141.38 44.81C141.38 43.06 140.26 39.730000000000004 136.01 39.730000000000004L117.99999999999999 39.730000000000004 117.99999999999999 51.59 136.01 51.59C137.87 51.59 141.38 50.52 141.38 46.510000000000005ZM141.38 31.11C141.38 29.349999999999998 140.26 26.03 136.01 26.03L117.99999999999999 26.03 117.99999999999999 37.89 136.01 37.89C137.87 37.89 141.38 36.82 141.38 32.81ZM188.37 43.23C188.37 48.31999999999999 191.41 51.94 196.41 51.94 199.26 51.94 201.02 51.269999999999996 201.79 50.849999999999994L201.31 49.379999999999995C200.31 49.85999999999999 199.03 50.339999999999996 196.66 50.339999999999996 193.27 50.339999999999996 190.32 48.26 190.32 42.879999999999995L202.68 42.879999999999995C202.71 42.489999999999995 202.75 42.199999999999996 202.75 41.72 202.71 39.03 201.56 33.85 196.05 33.85 191.57000000000002 33.85 188.37 37.56 188.37 43.230000000000004ZM269.39 51.59L271.37 51.59 271.37 41.080000000000005C271.37 34.84 267.21 33.85000000000001 265.41 33.85000000000001 262.63000000000005 33.85000000000001 260.55 35.41000000000001 259.62 37.27000000000001L259.55 37.27000000000001 259.39 34.26000000000001 257.59999999999997 34.26000000000001C257.66999999999996 35.610000000000014 257.72999999999996 36.820000000000014 257.72999999999996 38.49000000000001L257.72999999999996 51.59000000000001 259.71 51.59000000000001 259.71 40.860000000000014C259.71 38.100000000000016 261.91999999999996 35.51000000000001 264.84 35.51000000000001 268.27 35.51000000000001 269.39 38.27000000000001 269.39 41.34000000000001ZM245.08 51.97C247.71 51.97 249.60000000000002 50.56 250.43 49.18L250.52 49.18 250.75 51.59 252.57 51.59C252.38 50.31 252.35 48.830000000000005 252.35 47.45L252.35 40.7C252.35 37.43 251.26 33.85 246.35999999999999 33.85 244.66 33.85 242.76999999999998 34.33 241.26999999999998 35.32L241.85 36.73C243.06 35.86 244.63 35.449999999999996 246.10999999999999 35.449999999999996 250.35999999999999 35.449999999999996 250.35999999999999 39.129999999999995 250.35999999999999 40.83 243.57999999999998 40.76 240.01999999999998 43.1 240.01999999999998 47.17 240.01999999999998 49.54 241.68999999999997 51.97 245.07999999999998 51.97ZM119.71 36.17L119.71 27.75 136.01 27.75C139.53 27.75 139.66 30.77 139.66 31.11L139.66 32.81C139.66 36.050000000000004 136.39 36.17 136.01 36.17ZM139.66 46.51C139.66 49.75 136.39 49.87 136.01 49.87L119.71 49.87 119.71 41.449999999999996 136.01 41.449999999999996C139.53 41.449999999999996 139.66 44.47 139.66 44.809999999999995ZM215.2 42.88C215.2 38.39 217.57 35.480000000000004 221.03 35.480000000000004 224.2 35.480000000000004 226.28 38.14 226.28 40.89L226.28 44.45C226.28 47.36 224.04 49.99 221 49.99 217.16 49.99 215.2 46.78 215.2 42.88ZM173.61 49.95L173.61 39.45 176.49 39.45C180.01000000000002 39.45 183.37 40.92 183.37 44.800000000000004 183.37 48.800000000000004 180.08 50.14 176.42000000000002 50.14 175.24 50.14 174.28000000000003 50.11 173.61 49.95ZM173.61 28.98C174.12 28.82 175.02 28.72 176.55 28.72 180.04000000000002 28.72 182.51000000000002 29.91 182.51000000000002 33.21 182.51000000000002 35.86 180.33 37.88 176.91000000000003 37.88L173.61 37.88ZM122.09 64.02C119.4 64.02 118 65.61999999999999 118 68.24 118 70.83999999999999 119.43 72.46 122.09 72.46L122.21000000000001 72.46 123.58000000000001 73.86 126.03000000000002 73.86 124.10000000000001 72.05C125.47000000000001 71.42999999999999 126.18 70.08 126.18 68.24 126.18 65.61999999999999 124.78 64.02 122.09 64.02ZM210.18 70.94L207.62 64.16 205.70000000000002 64.16 205.70000000000002 72.32 206.86 72.32 206.86 65.25999999999999 206.89000000000001 65.25999999999999 209.59 72.32 210.73 72.32 213.42999999999998 65.25999999999999 213.45999999999998 65.25999999999999 213.45999999999998 72.32 214.62999999999997 72.32 214.62999999999997 64.16 212.69999999999996 64.16ZM141.07 64.16L137.98 72.32 140.17999999999998 72.32 140.82999999999998 70.58 143.89 70.58 144.5 72.32 146.88 72.32 143.74 64.16ZM313.81 68.24C313.81 70.83999999999999 315.24 72.46 317.9 72.46 320.57 72.46 321.98999999999995 70.83999999999999 321.98999999999995 68.24 321.98999999999995 65.61999999999999 320.59 64.02 317.9 64.02 315.21 64.02 313.81 65.61999999999999 313.81 68.24ZM280.63 70.57L280.61 70.57 278.79 64.16 276.48 64.16 279.21000000000004 72.32 281.90000000000003 72.32 284.68 64.16 282.45 64.16ZM173.72 67.44L172.12 64.16 169.62 64.16 172.63 69.25 172.63 72.32 174.79999999999998 72.32 174.79999999999998 69.25 177.79999999999998 64.16 175.29 64.16ZM307.75 67.44L306.15 64.16 303.64 64.16 306.65999999999997 69.25 306.65999999999997 72.32 308.83 72.32 308.83 69.25 311.82 64.16 309.32 64.16ZM194.77 68.24C194.77 70.72 196.20000000000002 72.46 198.69 72.46 201.19 72.46 202.62 70.72 202.62 68.24 202.62 65.82 201.17000000000002 64.02 198.69 64.02 196.22 64.02 194.77 65.82 194.77 68.24ZM244.75 68.24C244.75 70.72 246.18 72.46 248.67 72.46 251.16 72.46 252.6 70.72 252.6 68.24 252.6 65.82 251.15 64.02 248.67 64.02 246.19 64.02 244.75 65.82 244.75 68.24ZM250.4 45.98C250.4 47.26 249.11 50.37 245.4 50.37 243.67000000000002 50.37 242.1 49.279999999999994 242.1 46.879999999999995 242.1 42.839999999999996 246.78 42.39999999999999 250.4 42.39999999999999ZM330.19 69.7L330.17 69.7 327.42 64.16 324.65000000000003 64.16 324.65000000000003 72.32 326.64000000000004 72.32 326.57000000000005 66.75 326.6 66.75 329.45000000000005 72.32 332.15000000000003 72.32 332.15000000000003 64.16 330.16 64.16ZM190.42 41.34C190.70999999999998 38.74 192.28 35.45 195.85999999999999 35.45 199.73999999999998 35.45 200.76 38.870000000000005 200.73 41.34ZM133.66 68.86C133.66 69.94 133.37 70.85 132.26 70.85 131.14999999999998 70.85 130.85999999999999 69.94 130.85999999999999 68.86L130.85999999999999 64.16 128.67999999999998 64.16 128.67999999999998 69.22C128.67999999999998 71.46 130.12999999999997 72.46 132.26 72.46 134.39 72.46 135.82999999999998 71.46 135.82999999999998 69.22L135.82999999999998 64.16 133.66 64.16ZM300.39 68.28C301.45 68.03 301.96 67.31 301.96 66.22 301.96 64.82 300.78 64.16 299.33 64.16L295.45 64.16 295.45 72.32 297.62 72.32 297.62 69.08999999999999 298.08 69.08999999999999C298.89 69.08999999999999 299.16999999999996 69.44999999999999 299.60999999999996 70.85L300.08 72.32 302.34 72.32 301.54999999999995 70.1C301.13999999999993 69.11 301.09 68.49 300.38999999999993 68.3ZM206.94 51.59L208.93 51.59 208.93 26.000000000000004 206.94 26.000000000000004ZM161.74 65.78L163.75 65.78 163.75 72.32000000000001 165.92 72.32000000000001 165.92 65.78 167.92999999999998 65.78 167.92999999999998 64.16 161.73999999999998 64.16ZM337.22 70.78L337.22 68.93 340.6 68.93 340.6 67.39 337.22 67.39 337.22 65.71 340.8 65.71 340.8 64.16 335.05 64.16 335.05 72.32 340.93 72.32 340.93 70.77999999999999ZM270.69 68.93L274.07 68.93 274.07 67.39 270.69 67.39 270.69 65.71 274.27 65.71 274.27 64.16 268.52 64.16 268.52 72.32 274.4 72.32 274.4 70.77999999999999 270.69 70.77999999999999ZM289.08 68.93L292.46 68.93 292.46 67.39 289.08 67.39 289.08 65.71 292.65999999999997 65.71 292.65999999999997 64.16 286.90999999999997 64.16 286.90999999999997 72.32 292.78 72.32 292.78 70.77999999999999 289.08 70.77999999999999ZM259.08 68.23C260.02 68.07000000000001 260.76 67.37 260.76 66.37 260.76 64.42 259.21 64.16000000000001 257.59 64.16000000000001L255.58999999999997 64.16000000000001 255.58999999999997 72.32000000000001 256.76 72.32000000000001 256.76 68.7 257.46 68.7C258.08 68.7 258.46999999999997 68.7 258.83 69.49000000000001L260.08 72.32000000000001 261.40999999999997 72.32000000000001 259.86999999999995 69.07000000000001C259.60999999999996 68.57000000000001 259.43999999999994 68.39 259.0799999999999 68.25000000000001ZM151.31 64.16L149.14000000000001 64.16 149.14000000000001 72.32 154.68 72.32 154.68 70.71 151.31 70.71ZM228.2 65.05C228.79999999999998 65.05 229.13 65.16 229.73 65.39L229.89 64.32000000000001C229.32999999999998 64.12 228.69 64.02000000000001 228.14999999999998 64.02000000000001 226.67999999999998 64.02000000000001 225.52999999999997 64.79 225.52999999999997 66.24000000000001 225.52999999999997 68.78000000000002 229.03999999999996 68.28000000000002 229.03999999999996 70.10000000000001 229.03999999999996 71.06 228.09999999999997 71.43 227.43999999999997 71.43 226.83999999999997 71.43 226.13999999999996 71.2 225.73999999999998 71.04L225.62999999999997 72.12C226.15999999999997 72.30000000000001 226.71999999999997 72.46000000000001 227.29999999999995 72.46000000000001 228.92999999999995 72.46000000000001 230.27999999999994 71.77000000000001 230.27999999999994 70.03 230.27999999999994 67.34 226.76999999999995 67.7 226.76999999999995 66.14 226.76999999999995 65.28 227.53999999999996 65.05 228.19999999999996 65.05ZM218.18 72.32L222.75 72.32 222.75 71.28999999999999 219.35 71.28999999999999 219.35 68.6 222.44 68.6 222.44 67.58 219.35 67.58 219.35 65.19 222.75 65.19 222.75 64.16 218.18 64.16ZM237.85 72.32L239.01999999999998 72.32 239.01999999999998 68.6 242.04999999999998 68.6 242.04999999999998 67.58 239.01999999999998 67.58 239.01999999999998 65.19 242.18999999999997 65.19 242.18999999999997 64.16 237.84999999999997 64.16ZM233.87 51.59L235.86 51.59 235.86 34.260000000000005 233.87 34.260000000000005ZM245.98 68.24C245.98 66.58 246.86999999999998 65.03999999999999 248.67 65.05 250.47 65.03999999999999 251.35999999999999 66.58 251.35999999999999 68.24 251.35999999999999 69.86999999999999 250.55999999999997 71.42999999999999 248.67 71.42999999999999 246.79 71.42999999999999 245.98 69.86999999999999 245.98 68.24ZM196.01 68.24C196.01 66.58 196.89 65.03999999999999 198.69 65.05 200.5 65.03999999999999 201.38 66.58 201.38 68.24 201.38 69.86999999999999 200.57999999999998 71.42999999999999 198.69 71.42999999999999 196.81 71.42999999999999 196.01 69.86999999999999 196.01 68.24ZM120.24 68.24C120.24 66.83 120.77 65.63 122.08999999999999 65.63 123.40999999999998 65.63 123.93999999999998 66.83 123.93999999999998 68.24 123.93999999999998 69.58999999999999 123.40999999999998 70.85 122.08999999999999 70.85 120.77 70.85 120.24 69.58999999999999 120.24 68.24ZM316.05 68.24C316.05 66.83 316.58 65.63 317.90000000000003 65.63 319.22 65.63 319.75000000000006 66.83 319.75000000000006 68.24 319.75000000000006 69.58999999999999 319.2200000000001 70.85 317.90000000000003 70.85 316.58000000000004 70.85 316.05 69.58999999999999 316.05 68.24ZM157.14 72.32L159.32 72.32 159.32 64.16 157.14 64.16ZM233.39 29.33C233.39 30.2 234 30.93 234.86999999999998 30.93 235.73 30.93 236.36999999999998 30.29 236.36999999999998 29.33 236.36999999999998 28.47 235.78999999999996 27.759999999999998 234.89999999999998 27.759999999999998 234.02999999999997 27.759999999999998 233.39 28.499999999999996 233.39 29.33ZM256.76 67.67L256.76 65.19 257.88 65.19C258.96 65.19 259.52 65.66 259.52 66.39999999999999 259.52 67.17999999999999 258.87 67.66999999999999 257.75 67.66999999999999ZM141.33 69.04L142.38000000000002 65.85000000000001 142.40000000000003 65.85000000000001 143.37000000000003 69.04ZM297.62 67.55L297.62 65.71 298.2 65.71C299.03 65.71 299.78999999999996 65.85 299.78999999999996 66.61 299.78999999999996 67.53 298.9 67.55 298.2 67.55ZM190.48 64.16L191.64999999999998 64.16 191.64999999999998 72.32 190.48 72.32 190.48 68.6 186.57 68.6 186.57 72.32 185.41 72.32 185.41 64.16 186.57 64.16 186.57 67.58 190.48 67.58Z" fill="#ffffff" fill-opacity="1" transform="matrix(1,0,0,1,-118,-26)"/>
+						<path id="SvgjsPath1008" d="M154.74 26L143 26 143 46.36C143 50.47 146.39 51.55 148.19 51.55L166.38 51.55 166.38 39.809999999999995 154.74 39.809999999999995ZM164.66 41.53L164.66 49.84 148.19 49.84C148.05 49.84 144.71 49.800000000000004 144.71 46.36000000000001L144.71 27.710000000000008 153.02 27.710000000000008 153.02 41.53000000000001ZM341.89 26L339.9 26 339.9 36.76 339.84 36.76C339.03999999999996 35.25 337.21 33.809999999999995 334.41999999999996 33.809999999999995 330.25999999999993 33.809999999999995 326.77 37.37 326.77 43.16 326.77 48.449999999999996 329.90999999999997 51.94 334.07 51.94 337.15 51.94 339.15999999999997 50.269999999999996 340.03 48.379999999999995L340.11999999999995 48.379999999999995 340.24999999999994 51.55 342.04999999999995 51.55C341.94999999999993 50.37 341.88999999999993 48.769999999999996 341.88999999999993 47.449999999999996ZM310.95 37.24L310.89 37.24 310.72999999999996 34.230000000000004 308.93999999999994 34.230000000000004C308.99999999999994 35.57000000000001 309.05999999999995 36.790000000000006 309.05999999999995 38.46000000000001L309.05999999999995 51.55000000000001 311.04999999999995 51.55000000000001 311.04999999999995 40.83000000000001C311.04999999999995 38.070000000000014 313.25999999999993 35.48000000000001 316.16999999999996 35.48000000000001 319.59999999999997 35.48000000000001 320.71999999999997 38.23000000000001 320.71999999999997 41.31000000000001L320.71999999999997 51.55000000000001 322.71 51.55000000000001 322.71 41.05000000000001C322.71 34.81000000000001 318.53999999999996 33.81000000000001 316.75 33.81000000000001 313.96 33.81000000000001 311.88 35.38000000000001 310.95 37.24000000000001ZM303.68 40.67C303.68 37.4 302.59000000000003 33.81 297.7 33.81 296 33.81 294.11 34.29 292.59999999999997 35.29L293.17999999999995 36.699999999999996C294.4 35.83 295.96999999999997 35.41 297.43999999999994 35.41 301.69999999999993 35.41 301.69999999999993 39.099999999999994 301.69999999999993 40.79 294.9099999999999 40.73 291.3499999999999 43.07 291.3499999999999 47.129999999999995 291.3499999999999 49.49999999999999 293.0199999999999 51.94 296.4099999999999 51.94 299.0399999999999 51.94 300.9299999999999 50.53 301.75999999999993 49.15L301.85999999999996 49.15 302.08 51.55 303.90999999999997 51.55C303.71999999999997 50.269999999999996 303.67999999999995 48.8 303.67999999999995 47.419999999999995ZM339.9 44.57C339.9 46.97 338.10999999999996 50.31 334.52 50.31 330.65 50.31 328.78999999999996 46.85 328.78999999999996 43.040000000000006 328.78999999999996 38.71000000000001 331.03 35.45 334.61999999999995 35.45 337.34 35.45 339.8999999999999 37.56 339.8999999999999 41.11ZM301.73 45.95C301.73 47.230000000000004 300.45000000000005 50.34 296.73 50.34 295.01 50.34 293.44 49.25 293.44 46.85 293.44 42.81 298.11 42.36 301.73 42.36ZM278.83 49.89L289.34 49.89 289.34 51.55 276.84999999999997 51.55 276.84999999999997 27.249999999999996 278.83 27.249999999999996Z" fill="#7ac143" fill-opacity="1" transform="matrix(1,0,0,1,-118,-26)"/>
+					</svg>
+				</a>
+			
+				<div class="lang-link"><a href="#">FR - NL</a></div>
+				</div>
+
+
+			<div class="owl-carousel slider">
+
+
+				<div class="slider-inner">
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="part-left">
+									<h1>We provide access to quality housing at affordable pricing</h1>
+									<a href="#">Find out more	</a>
+
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">					
+								<div class="part-right" style="background-image: url(.//img/slide_1.png)">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider-inner">
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="part-left">
+									<h1>We provide access to quality housingat affordable pricing</h1>
+									<a href="#">Find out more	</a>
+
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">					
+								<div class="part-right" style="background-image: url(.//img/slide_1.png)">
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="slider-inner">
+
+					<div class="container-fluid">
+						<div class="row wrap-arr">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="part-left">
+									<h1>We provide access to quality housingat affordable pricing</h1>
+									<a href="#">Find out more	</a>
+
+
+
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">					
+								<div class="part-right" style="background-image: url(.//img/slide_1.png)">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<section class="projects" id="project">
+
+			<div class="top-pannel-project top-nav">
+				<div class="toggle-mnu ">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<span class="mnu-span">Menu</span>
+				<img src="img/top-nav.png" alt="Alt">
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="projects-list col-md-6 col-sm-6">
+
+
+
+						<div class="projects-title hidden-xs">
+							<h2>Projects</h2>
+							<ul>
+								<li class="project_list_item"><a class="page-popup" href="#test-modal">Clélidée</a></li>
+								<li class="project_list_item"><a class="page-popup" href="#test-modal">Emaillerie</a></li>
+								<li class="project_list_item"><a class="page-popup" href="#test-modal">Clélidée</a></li>
+								<li class="project_list_item"><a class="page-popup" href="#test-modal">Emaillerie</a></li>
+								<li class="project_list_item"><a class="page-popup" href="#test-modal">Les Hauts Prés</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<div class="row">
+							<div class="project-items">
+
+								<a class="page-popup" href="#test-modal">
+									<div class="col-md-6 col-sm-6  pos-rel col-xs-6"">
+										<div class="project-head" href="#"><img src="img/project_clelidee.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+										</div>
+										<div class="project-overley">
+											<h2>74 appartements</h2>
+											<span>1250 M2</span>
+										</div>
+									</div>
+								</a>
+
+								<a class="page-popup" href="#test-modal">
+									<div class="col-md-6 col-sm-6 pos-rel hidden-item col-xs-6" data-toggle="modal" data-target=".page-modal">
+										<div class="project-head" href="#"><img src="img/project_emaillerie.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+										</div>
+										<div class="project-overley">
+											<h2>74 appartements</h2>
+											<span>1250 M2</span>
+										</div>
+									</div>
+								</a>
+
+								<a class="page-popup" href="#test-modal">
+									<div class="col-md-6 col-sm-6 pos-rel col-xs-6" data-toggle="modal" data-target=".page-modal">
+										<div class="project-head" href="#"><img src="img/project_clelidee.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+										</div>
+										<div class="project-overley">
+											<h2>74 appartements</h2>
+											<span>1250 M2</span>
+										</div>
+									</div>
+								</a>
+
+								<a class="page-popup" href="#test-modal">
+									<div class="col-md-6 col-sm-6 pos-rel hidden-item col-xs-6" data-toggle="modal" data-target=".page-modal">
+										<div class="project-head" href="#"><img src="img/project_emaillerie.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+										</div>
+										<div class="project-overley">
+											<h2>74 appartements</h2>
+											<span>1250 M2</span>
+										</div>
+									</div>
+								</a>
+								<a class="page-popup" href="#test-modal">
+									<div class="col-md-6 col-sm-6  pos-rel col-xs-6" data-toggle="modal" data-target=".page-modal">
+										<div class="project-head" href="#"><img src="img/project_les.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+										</div>
+										<div class="project-overley">
+											<h2>74 appartements</h2>
+											<span>1250 M2</span>
+										</div>
+									</div>
+								</a>
+								<div class="col-md-6 col-sm-6 hidden-item  col-xs-6 coming-soon" >
+									<h2>More to come soon</h2>
+									<div class="project-head" href="#"><img src="img/project_les.png" alt="Alt"></div>
+										<div class="project-body">
+											<h3>Clelidee</h3>
+											<span>Molenbeek</span>
+											<span>Vendu</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="team projects" id="team">
+
+			<div class="top-pannel-project top-nav top-nav-team">
+				<div class="toggle-mnu ">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<span class="mnu-span">Menu</span>
+				<img src="img/top-nav.png" alt="Alt">
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="projects-list team-list col-md-6 col-sm-6">
+
+
+
+						<div class="projects-title team-title">
+							<h2>Team</h2>
+							<p>Belgian land focuses on the development of affordable housing in Belgium in partnership with real estate developers.</p>
+
+
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 team-list-right">
+						<div class="row">
+							<div class="team-items">
+
+								<div class=" team-item ">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item ">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item ">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item ">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+								<div class=" team-item ">
+									<div class="img-team"><img src="img/mg-4.png" alt="Alt"></div>
+									<div class="contact-inf">
+										<h2>Emilie Rousseaux </h2>
+										<span>FUND MANAGER</span>
+
+										<div class="tel">Phone : +32 (0)2 643 33 95 </div>
+										<div class="mob">Mobile : +32 (0)477 45 54 17 </div>
+										<div class="mail"><a href="#">emilie.rousseaux@belgianland.be</a></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="aboutUs" class="about-us projects">
+
+			<div class="top-pannel-project top-nav top-nav-about">
+				<div class="toggle-mnu ">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<span class="mnu-span">Menu</span>
+				<img src="img/nav-about.png" alt="Alt">
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 wrapper">
+								<div class="tabs">
+									<h2 class="tab">About Us</h2>
+									<h2 class="tab">PHILOSOPHY</h2>
+									<h2 class="tab">GOVERNANCE</h2>
+								</div>
+
+								<div class="tab-content">
+									<div class="tab-item">
+
+										<h3>Belgian land focuses on the development of aﬀordable housing in Belgium in partnership with real estate developers.</h3>
+										<p class="f-p">Belgian Land is a limited liability company ("SA") under Belgian law incorporated by Bank Degroof-Petercam and the real estate advisor CBRE.</p>
+										<p class="s-p">The activities of Belgian Land started in March 2013, pursuant to the capital investment of almost 55 million euro through private placement.</p>
+										<p class="t-p">This initiative is based, on the one hand, on the acknowledgment of the strong economic, social and demographic evolution in most of the large urban areas in Belgium and, on the other hand, on the many development opportunities for which a large number of developers lack the ﬁnancial means. </p>
+										<p class="f-p">The strategy of Belgian consists of investing in aﬀordable residential development projects in partnership. Projects of interest will be those targeting a population with average purchasing power in the large cities.</p>
+										<p class="fif-p">Belgian Land is also taking a position as an active partner in each project. With an operational team, Belgian Land leads with his partners, the development of their projects, from the conception to the sale of the last unit.</p>
+
+
+									</div>
+									<div class="tab-item">Content 2</div>
+									<div class="tab-item">Content 3</div>
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="news" class="news projects">
+
+					<div class="top-pannel-project top-nav top-nav-news">
+						<div class="toggle-mnu ">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
+						<span class="mnu-span">Menu</span>
+						<img src="img/top-nav.png" alt="Alt">
+					</div>
+
+
+
+					<div class="container-fluid">
+						<div class="row">
+
+
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 news-wrap">
+										<h2 class="active">News</h2>
+										<h2>Press <span>Release</span></h2>
+										<div class="select">
+											<select id="select-news">
+												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+											</select>
+											<img src="img/shape-copy.png" alt="Alt">
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="container">
+								<div class="row">
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+
+									<div class="col-md-4 first-item-news btn btn-primary btn-lg"  data-toggle="modal" data-target=".modal-news">
+										<div class="item-news">
+											<span>30/06/2016</span>
+											<h3>Glacière : Consultation Committee for our project in Auderghem</h3>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="contact" class="get-in">
+
+
+					<div class="top-pannel-project top-nav top-nav-footer">
+						<div class="toggle-mnu ">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+
+						<span class="mnu-span">Menu</span>
+						<img src="img/top-nav.png" alt="Alt">
+					</div>
+
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 map">
+								<img src="img/slice-2.png" alt="Alt">
+								<div class="map-overley">
+									<h2>Get in touch</h2>
+
+									<h3>Belgian Land</h3>
+									<p>Operational Oﬃce Avenue Lloyd Georgelaan 7 1000 Brussels</p>
+									<a href="#">view map</a>
+									<span class="tel-footer">+32 765 66 66</span>
+
+									<a href="#" class="mail-footer">info@belgianland.be</a>
+
+								</div>
+							</div>
+							<div class="col-md-6 contact-form hidden-xs">
+								<form  id="form">
+									<div class="input-field">
+										<input type="text" placeholder="Full Name"  required="required">
+									</div>
+									<div class="input-field">
+										<input type="email" placeholder="Email" required="required">
+									</div>
+									<div class="input-field">
+										<input type="tel" placeholder="Phone  n°"  required="required">
+									</div>
+									<div class="input-field">
+										<input type="text" placeholder="Company"  required="required">
+									</div>
+									<textarea  placeholder="Message"></textarea>
+
+									<button type="input" class="btn">Send</button>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer id="footer">
+					<div class="container">
+						<span>©2016 - Belgian Land SA/NV - <a href="#">Disclaimer</a></span>
+					</div>
+				</footer>
+
+
+
+
+
+				<!-- Modal  News-->
+				<div class="modal fade modal-news" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="news-info">
+								<div class="top-pannel-news">
+									<button type="button" class="close close-mnu news-close" data-dismiss="modal" aria-label="Close">&#x2715</button>
+									<img src="img/slice-5.png" alt="Alt">
+									<div class="arrow-news">
+										<img src="img/shape1.png" alt="Alt">
+										<img src="img/shape-copy-2.png" alt="Alt">
+									</div>
+								</div>
+
+								<div class="container">	
+									<div class="wrap-news">	
+										<div class="wrap-head">	
+											<span>30/06/2016</span>
+											<h1>Glacière : Consultation Committee for our project in Auderghem</h1>
+											<span class="autor">By Olivia Jean</span>
+										</div>
+
+										<div class="wrap-body">
+
+											<p class="f-w-p">The consultation committee for the project Glacière, for which a permit was introduced end 2015, was held today in the city Auderghem. The Glacière project is a mixed project of 36,000m² consisting of housing, student rooms and retail.</p>
+											<p class="s-w-p">This consultation committee has focused on the speciﬁcations of the impact study.The administrative procedure is put forth and permits are expected mid-2018.</p>
+										</div>
+
+										<div class="wrap-img">
+											<img src="img/news_1.png" alt="Alt">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Modal Map-->
+				<div class="modal fade map-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+
+							<div class="modal-map">
+								<div class="map-wrap">
+									<div class="close-map" data-dismiss="modal" aria-label="Close" >&#x2715</div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d629.633311097485!2d4.320837766819153!3d50.8583270773021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3faeaa0fea1%3A0xbfc81bc2f612fc6b!2zQ8OpbGlkw6llc3RyYWF0IDMzLCAxMDgwIFNpbnQtSmFucy1Nb2xlbmJlZWssINCR0LXQu9GM0LPQuNGP!5e0!3m2!1sru!2sru!4v1477951264223" width="700" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="map-title">
+									<h2>Situation :</h2>
+									<p>Rue de la Célidée, 33 - Molenbeek</p>
+									<a href="#">Fermer la carte</a>
+								</div>
+							</div> 
+
+						</div><!-- owl-car -->
+					</div>	<!--content-->
+				</div><!-- dialog -->
+
+
+
+
+
+
+
+
+				<div id="test-modal" class="mfp-hide white-popup-block">
+					<div class="container-owl">
+						<div class="owl-carousel-page">
+
+							<div class="item">
+								<div class="page_project">
+									<div class="project-info">
+
+										<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+											<ol class="carousel-indicators">
+												<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+												<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+											</ol>
+
+											<div class="carousel-inner " data-pause role="listbox">
+												<div class="item active">
+													<img class="f-img" src="img/project1.png" alt="Alt">
+													<img  class="hidden-xs t-img" src="img/project2.png" alt="Alt">
+												</div>
+												<div class="item" >
+													<img class=" hidden-xs t-img" src="img/project2.png" alt="Alt">
+													<img class="f-img"  src="img/project1.png" alt="Alt" >
+												</div>
+											</div><!--	Wrapper for slides -->
+										</div><!-- carousel-example-generic -->
+
+										<div class="nav-project">
+											<button type="button" class="close close-mnu project-close popup-modal-dismiss">&#x2715</button>
+
+											<img src="img/slice-5.png" alt="Alt">
+
+
+										</div><!--nav project -->
+
+
+										<div class="container">
+											<div class="row">
+												<div class="col-md-8">
+
+													<div class="project-inf-wrap">
+														<div class="wrap-title">
+															<span>PROJECTS/ </span>
+															<h1>CELIDEE</h1>
+														</div>
+
+														<span class="pro-sp">MOLENBEEK</span>
+
+														<a href="#">icone: www.siteduprojet.be</a>
+
+														<div class="wrap-body">
+															<p class="w-p-f">Belgian Land has obtained the permits for the development of its ﬁrst project in Brussels, in Molenbeek. 93 apartments and 3 houses at aﬀordable prices will be developed in the course of 2016</p>
+															<p class="w-r-s">The project is ideally located near the city centre, close to the public transports. It is surrounded by shops, schools, sport accommodations and parks. The delivery is expected in 2018.</p>
+															<a href="#">Consulter la brochure
+															</a>
+														</div>
+
+														<div class="wrap-footer">
+															<h3>OTHER PROJECTS</h3>
+															<a href="#">Glacière</a>
+															<a href="#">Emaillerie</a>
+															<a href="#">Les Hauts Prés</a>
+														</div>
+
+													</div><!--project-inf-wrap -->
+												</div><!--col-md-8 -->
+
+												<div class="col-md-4">
+													<aside class="main-aside">
+
+														<div class="aside-head">
+															<span>Situation :</span>
+															<p>Rue de la Célidée, 33 - Molenbeek </p>
+															<a data-toggle="modal" data-target=".map-modal" href="#" >montrer sur une carte</a>
+														</div>
+														<div class="aside-body">
+															<h4>Statuc :</h4>
+															<span>Sold</span>
+
+															<h4>Partner : </h4>
+															<span>ION</span>
+
+															<h4>Program : </h4>
+															<span>93 apartments and 3 houses</span>
+
+															<h4>Architect :</h4>
+															<span>A2RC</span>
+
+															<h4>Livraison : </h4>
+															<span>12 September 2016</span>
+														</div>
+
+														<div class="wrap-footer-hidden">
+															<h3>OTHER PROJECTS</h3>
+															<a href="#">Glacière</a>
+															<a href="#">Emaillerie</a>
+															<a href="#">Les Hauts Prés</a>
+														</div>
+
+													</aside>
+												</div>
+											</div>
+										</div><!--container-->
+									</div><!--project-info-->
+								</div><!--page_project--></div>
+
+
+								<div class="item"><div class="page_project">
+									<div class="project-info">
+
+										<div id="second-project" class="carousel slide second-project" data-ride="carousel">
+
+											<ol class="carousel-indicators">
+												<li data-target="#second-project" data-slide-to="0" class="active"></li>
+												<li data-target="#second-project" data-slide-to="1"></li>
+											</ol>
+
+											<div class="carousel-inner " data-pause role="listbox">
+												<div class="item active">
+													<img class="f-img" src="img/project1.png" alt="Alt">
+													<img  class="hidden-xs t-img" src="img/project2.png" alt="Alt">
+												</div>
+												<div class="item" >
+													<img class=" hidden-xs t-img" src="img/project2.png" alt="Alt">
+													<img class="f-img"  src="img/project1.png" alt="Alt" >
+												</div>
+											</div><!--	Wrapper for slides -->
+										</div><!-- carousel-example-generic -->
+
+										<div class="nav-project">
+											<button type="button" class="close close-mnu project-close popup-modal-dismiss">&#x2715</button>
+
+											<img src="img/slice-5.png" alt="Alt">
+
+
+										</div><!--nav project -->
+
+
+										<div class="container">
+											<div class="row">
+												<div class="col-md-8">
+
+													<div class="project-inf-wrap">
+														<div class="wrap-title">
+															<span>PROJECTS/ </span>
+															<h1>CELIDEE</h1>
+														</div>
+
+														<span class="pro-sp">MOLENBEEK</span>
+
+														<a href="#">icone: www.siteduprojet.be</a>
+
+														<div class="wrap-body">
+															<p class="w-p-f">Belgian Land has obtained the permits for the development of its ﬁrst project in Brussels, in Molenbeek. 93 apartments and 3 houses at aﬀordable prices will be developed in the course of 2016</p>
+															<p class="w-r-s">The project is ideally located near the city centre, close to the public transports. It is surrounded by shops, schools, sport accommodations and parks. The delivery is expected in 2018.</p>
+															<a href="#">Consulter la brochure
+															</a>
+														</div>
+
+														<div class="wrap-footer">
+															<h3>OTHER PROJECTS</h3>
+															<a href="#">Glacière</a>
+															<a href="#">Emaillerie</a>
+															<a href="#">Les Hauts Prés</a>
+														</div>
+
+													</div><!--project-inf-wrap -->
+												</div><!--col-md-8 -->
+
+												<div class="col-md-4">
+													<aside class="main-aside">
+
+														<div class="aside-head">
+															<span>Situation :</span>
+															<p>Rue de la Célidée, 33 - Molenbeek </p>
+															<a data-toggle="modal" data-target=".map-modal" href="#">montrer sur une carte</a>
+														</div>
+														<div class="aside-body">
+															<h4>Statuc :</h4>
+															<span>Sold</span>
+
+															<h4>Partner : </h4>
+															<span>ION</span>
+
+															<h4>Program : </h4>
+															<span>93 apartments and 3 houses</span>
+
+															<h4>Architect :</h4>
+															<span>A2RC</span>
+
+															<h4>Livraison : </h4>
+															<span>12 September 2016</span>
+														</div>
+
+														<div class="wrap-footer-hidden">
+															<h3>OTHER PROJECTS</h3>
+															<a href="#">Glacière</a>
+															<a href="#">Emaillerie</a>
+															<a href="#">Les Hauts Prés</a>
+														</div>
+														
+													</aside>
+												</div>
+											</div>
+										</div><!--container-->
+									</div><!--project-info-->
+								</div><!--page_project--></div>
+							</div>
+
+						</div>
+					</div>
+
+
+					<!-- Optimized loading JS Start -->
+					<script>var scr = {"scripts":[
+						{"src" : "js/libs.min.js", "async" : false},
+						{"src" : "js/common.js", "async" : false}
+						]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+					</script>
+					<!-- Optimized loading JS End -->
+				</body>
+				</html>
